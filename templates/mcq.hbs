@@ -1,5 +1,6 @@
 <div class="mcq-inner component-inner" role="region" aria-label="{{_globals._components._mcq.ariaRegion}}" {{#if _globals._components._mcq.ariaRegion}}tabindex="0"{{/if}}>
     {{> component this}}
+            <img src="{{_graphic.src}}" data-large="{{_graphic.large}}" data-small="{{_graphic.small}}"{{#if _graphic.alt}} aria-label="{{_graphic.alt}}" tabindex="0"{{else}} class="a11y-ignore" aria-hidden="true" tabindex="-1"{{/if}}/>
     <div class="mcq-widget component-widget {{#unless _isEnabled}} disabled {{#if _isInteractionComplete}} complete submitted show-user-answer {{#if _isCorrect}}correct{{/if}} {{/if}} {{/unless}}">
         {{#each _items}}
         <div class="mcq-item component-item component-item-color {{#unless ../_isEnabled}}{{#if ../_canShowMarking}}{{#if _isCorrect}}correct{{else}}incorrect{{/if}}{{/if}}{{/unless}} item-{{@index}}">
